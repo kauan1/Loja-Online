@@ -104,9 +104,9 @@ class CartModel extends Model {
         "clientId": user.firebaseUser.uid,
         "products": products.map((cartProduct)=>cartProduct.toMap()).toList(),
         "shipPrice": shipPrice,
-        "productPrice": productsPrice.toStringAsFixed(2),
+        "productPrice": productsPrice,
         "discount": discount,
-        "totalPrice": (productsPrice - discount + shipPrice).toStringAsFixed(2),
+        "totalPrice": (productsPrice - discount + shipPrice),
         "status": 1
       }
     );
